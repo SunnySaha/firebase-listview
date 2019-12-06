@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.sunny.firebase_listview.MainActivity">
 
    <ListView
@@ -15,4 +16,34 @@
 
    </ListView>
 
-</LinearLayout>
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       android:id="@+id/bottom_navigation_layout"
+       android:background="@color/white"
+
+
+       />
+
+    <android.support.design.widget.BottomNavigationView
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/bottom_navigation_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation"
+        app:itemIconTint="@drawable/item_selected"
+        app:itemTextColor="@drawable/item_selected"
+
+        >
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
