@@ -36,7 +36,7 @@
         app:menu="@menu/bottom_navigation"
         app:itemIconTint="@drawable/item_selected"
         app:itemTextColor="@drawable/item_selected"
-
+         android:background="@color/gray"
         >
 
     </android.support.design.widget.BottomNavigationView>
