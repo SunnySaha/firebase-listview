@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.security.spec.ECField;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -80,8 +82,14 @@ public class Profile extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            try{
+                throw new RuntimeException(context.toString()
+                        + " must implement OnFragmentInteractionListener");
+            }catch (Exception e){
+
+
+            }
+
         }
     }
 

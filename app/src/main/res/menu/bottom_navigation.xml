@@ -4,7 +4,7 @@
     <item
 
         android:title="Home"
-        android:icon="@drawable/ic_library_books_black_24dp"
+        android:icon="@drawable/ic_home_black_24dp"
         android:id="@+id/homenavigation"
 
         >
@@ -20,11 +20,32 @@
         >
 
     </item>
+
+    <item
+
+        android:title="Courses"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        android:id="@+id/coursenavigation"
+
+        >
+
+    </item>
+
     <item
 
         android:title="Profile"
         android:icon="@drawable/ic_tag_faces_black_24dp"
         android:id="@+id/profilenavigation"
+
+        >
+
+    </item>
+
+    <item
+
+        android:title="Control Panel"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:id="@+id/controlnavigation"
 
         >
 

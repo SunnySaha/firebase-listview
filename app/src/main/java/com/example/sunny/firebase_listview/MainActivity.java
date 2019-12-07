@@ -6,7 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.TooManyListenersException;
 
 public class MainActivity extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener{
     ListView listView;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
     ArrayAdapter<String> adapter;
     BottomNavigationView bottomNavigationView;
     Data data;
+    Button register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.coursenavigation);
 
-
+        register = findViewById(R.id.registerbutton);
 
         ref = database.getReference("");
         data = new Data();
@@ -57,6 +59,15 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Login.class);
+                startActivity(i);
+                
             }
         });
 
@@ -91,4 +102,6 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
         }
         return false;
     }
+
+
 }
