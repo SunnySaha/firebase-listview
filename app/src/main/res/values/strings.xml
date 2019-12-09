@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Firebase_listview</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <array name="departments_name">
+
+        <item>Chose Your Department</item>
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>CIVIL</item>
+        <item>Architecture</item>
+        <item>English</item>
+        <item>BBA</item>
+        <item>HOTEL TOURISM</item>
+        <item>ISLAMIC STUDIES</item>
+        <item>LAW</item>
+
+    </array>
 </resources>

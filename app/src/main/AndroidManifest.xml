@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".Forget_Password" />
-        <activity android:name=".Register_Id"></activity>
+        <activity android:name=".Register_Id" />
+        <activity android:name=".Register_Email" />
+        <activity android:name=".Register_Pass" />
+        <activity android:name=".Register_validity"></activity>
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
     ArrayAdapter<String> adapter;
     BottomNavigationView bottomNavigationView;
     Data data;
-    Button register;
+    Button register, login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.coursenavigation);
 
-        register = findViewById(R.id.registerbutton);
+        register = findViewById(R.id.register_button);
+        login = findViewById(R.id.login_button);
 
         ref = database.getReference("");
         data = new Data();
@@ -62,12 +63,20 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
             }
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Login.class);
                 startActivity(i);
                 
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Register_Id.class);
+                startActivity(i);
             }
         });
 

@@ -8,12 +8,15 @@ public class Forget_Password extends AppCompatActivity {
 
     TextInputLayout emailToReset;
 
+    String emailreset;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget__password);
 
         emailToReset = findViewById(R.id.emailToResetPass);
-        
+
+        emailreset = emailToReset.getEditText().getText().toString().trim();
     }
 }
